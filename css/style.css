@@ -1,0 +1,1037 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0 auto;
+  color: #444444;
+  font-size: 1.4rem;
+  font-family: "メイリオ", "游ゴシック", YuGothic, Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  letter-spacing: 0.1em;
+  background-color: #ffffff;
+  display: grid; }
+
+header {
+  grid-area: header; }
+
+nav {
+  grid-area: navi; }
+
+aside {
+  grid-area: aside; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer; }
+
+/*------------sp  全ページ共通------------
+------------------------------------------*/
+body {
+  width: 100%;
+  grid-template: "......" "header" "......" "aside " "......" 10px "main  " "......" 10px "footer" "......"; }
+  body header {
+    background-color: #CEECE7;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative; }
+    body header .logo-col h1 {
+      margin-bottom: 0.5rem;
+      height: 40px; }
+    body header .logo-col img {
+      height: 35px; }
+    body header .info-col #denwa {
+      width: 167px;
+      height: 20px; }
+    body header .info-col p {
+      margin-bottom: 3px;
+      height: auto; }
+    body header .info-col dd, body header .info-col dt {
+      font-size: 1.0rem; }
+    body header .menubtn {
+      display: block;
+      position: absolute;
+      top: 11px;
+      right: 10px;
+      z-index: 3;
+      cursor: pointer; }
+      body header .menubtn img {
+        height: 35px; }
+    body header .sp-menubtn_toggle {
+      width: 100%;
+      position: absolute;
+      top: 130px;
+      left: 0;
+      display: none;
+      background-color: #f0eee4;
+      padding-left: 0;
+      z-index: 9999; }
+      body header .sp-menubtn_toggle li {
+        display: block;
+        list-style: none;
+        padding: 0.8rem 2.0rem;
+        border-bottom: 1px solid #ffffff;
+        text-align: left; }
+        body header .sp-menubtn_toggle li a {
+          display: block;
+          text-decoration: none;
+          padding: 3px; }
+          body header .sp-menubtn_toggle li a img {
+            margin: 0;
+            padding: 0;
+            height: 20px; }
+  body nav,
+  body aside #hospital-info {
+    display: none; }
+  body aside h2 {
+    padding: 0.8rem 2.0rem;
+    background-color: #f0eee4; }
+    body aside h2 img {
+      height: 20px; }
+  body aside .page-info p {
+    padding: 1.0rem 1.0rem 1.0rem 4.8rem;
+    border-bottom: 1.0px solid #DDD9C6;
+    background-image: url(../images/top/squear.png);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: 2.5rem 50%; }
+    body aside .page-info p a {
+      font-size: 1.4rem;
+      display: block;
+      text-decoration: none;
+      color: #000000; }
+  body footer {
+    text-align: center; }
+    body footer .footer-navi {
+      padding: 2.5rem 0;
+      background-color: #CEECE7; }
+      body footer .footer-navi .info-col {
+        margin-bottom: 1.5rem; }
+        body footer .footer-navi .info-col dl {
+          line-height: 1.4;
+          font-size: 1.4rem; }
+      body footer .footer-navi .nav-col #footer-nav {
+        margin-bottom: 2.0rem; }
+        body footer .footer-navi .nav-col #footer-nav ul {
+          padding-left: 0; }
+        body footer .footer-navi .nav-col #footer-nav li {
+          list-style: none;
+          display: block;
+          margin-bottom: 0.5rem; }
+          body footer .footer-navi .nav-col #footer-nav li a {
+            display: block;
+            text-align: center;
+            font-size: 1.2rem; }
+      body footer .footer-navi .nav-col #copyright {
+        font-size: 9px;
+        letter-spacing: 0; }
+    body footer #pagetop {
+      position: absolute;
+      right: 15px;
+      top: -20px;
+      transition: 1s;
+      opacity: 1.0; }
+      body footer #pagetop :hover {
+        opacity: 0.7; }
+      body footer #pagetop a {
+        display: block; }
+        body footer #pagetop a img {
+          width: 42px; }
+
+/*---------pc　全ページ共通(01以外)--------
+------------------------------------------*/
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 980px;
+    grid-template: "... ...... ...... ......  ..." 15px "... header header header  ..." "... ...... ...... ......  ..." 15px "... navi   navi   navi    ..." "... ...... ...... ......  ..." 30px "... aside  ...... main    ..." "... ...... ...... ......  ..." 10px "... footer footer footer  ..." "... ...... ...... ......  ..." 10px/15px 190px 40px minmax(300px, 1fr) 15px;
+    /*最小300px以上で最大いっぱい*/ }
+    body header {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0; }
+      body header .logo-col h1 {
+        margin: 0;
+        height: 55px; }
+        body header .logo-col h1 a {
+          height: 55px; }
+      body header .logo-col img {
+        height: 55px; }
+      body header .info-col #denwa {
+        float: right;
+        width: 250px;
+        height: 30px; }
+      body header .info-col p {
+        margin-bottom: 7px;
+        height: 30px; }
+      body header .info-col dd, body header .info-col dt {
+        font-size: 1.3rem; }
+      body header .menubtn,
+      body header .sp-menubtn_toggle {
+        display: none; }
+    body nav,
+    body aside #hospital-info {
+      display: block; }
+    body nav {
+      background-color: #ffffff;
+      height: 24px; }
+      body nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        body nav ul li img {
+          display: inline-block;
+          height: 22px; }
+        body nav ul li .kugiri {
+          height: 18px; }
+    body aside #hospital-info {
+      background-color: #f0eee4;
+      border: 1px solid #f0eee4; }
+    body aside h2 {
+      display: block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 15px;
+      background-color: #f0eee4;
+      border: 1px solid #f0eee4;
+      border-radius: 10px 10px 0 0; }
+      body aside h2 img {
+        vertical-align: middle;
+        height: 21px; }
+    body aside .page-info p {
+      padding: 1.0rem 1.0rem 1.0rem 4.5rem;
+      border-left: 1px solid #f0eee4;
+      border-right: 1px solid #f0eee4;
+      border-bottom: 1px solid #f0eee4;
+      background-image: url(../images/top/squear.png);
+      background-repeat: no-repeat;
+      background-size: 10px 10px;
+      background-position: 2.5rem 50%; }
+      body aside .page-info p a {
+        font-size: 1.4rem;
+        display: block;
+        text-decoration: none;
+        color: #000000; }
+    body aside #hospital-info {
+      margin-top: 20px;
+      padding: 17px 15px 17px 15px; }
+      body aside #hospital-info section h3 {
+        font-size: 13px;
+        margin-bottom: 10px;
+        color: #EE9200; }
+      body aside #hospital-info section dt {
+        font-size: 14px;
+        margin: 4px 0;
+        font-weight: bold; }
+      body aside #hospital-info section dd, body aside #hospital-info section p {
+        font-size: 12px;
+        margin-bottom: 8px; }
+      body aside #hospital-info section .tel img {
+        display: block;
+        height: 18px; }
+      body aside #hospital-info .sec {
+        margin-bottom: 30px; }
+    body main {
+      padding-top: 0.5rem; }
+    body footer .footer-navi {
+      display: flex;
+      padding: 24px 50px 18px 50px;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      background-color: #CEECE7; }
+      body footer .footer-navi .info-col {
+        margin-bottom: 0; }
+        body footer .footer-navi .info-col dl {
+          line-height: 1; }
+        body footer .footer-navi .info-col dt {
+          font-size: 16px;
+          margin-bottom: 6px; }
+        body footer .footer-navi .info-col dd {
+          font-size: 13px;
+          margin-bottom: 5px; }
+      body footer .footer-navi .nav-col #footer-nav {
+        margin-bottom: 0; }
+        body footer .footer-navi .nav-col #footer-nav li {
+          list-style: none;
+          display: inline-block;
+          margin-bottom: 8px; }
+          body footer .footer-navi .nav-col #footer-nav li a {
+            display: inline-block;
+            font-size: 12px; }
+        body footer .footer-navi .nav-col #footer-nav .sla::after {
+          content: "/";
+          margin: 0 5px; }
+      body footer .footer-navi .nav-col #copyright {
+        font-size: 10px;
+        letter-spacing: normal; }
+    body footer #pagetop {
+      position: absolute;
+      right: 20px;
+      top: -40px;
+      transition: 1s;
+      opacity: 1.0; }
+      body footer #pagetop :hover {
+        opacity: 0.7; }
+      body footer #pagetop a {
+        display: block; }
+        body footer #pagetop a img {
+          width: 70px; } }
+/*------------sp pc　全ページ共通----------
+------------------------------------------*/
+header {
+  padding: 15px 10x; }
+  header h1 {
+    height: 59px; }
+  header .logo-col a {
+    display: block;
+    text-align: center; }
+  header dl, header dd, header dt {
+    display: inline-block;
+    font-size: 1.3rem; }
+  header dl.reception::after {
+    content: "/";
+    margin: 0 3px; }
+  header dd {
+    margin-left: 0; }
+  header p {
+    height: 30px;
+    margin-bottom: 10px; }
+
+footer {
+  position: relative; }
+  footer .footer-navi dd {
+    letter-spacing: 0; }
+  footer .footer-navi a {
+    text-decoration: none;
+    color: #000000; }
+
+/*------------ページ04facilities-----------
+------------------------------------------*/
+.facilities04 .blk {
+  margin: 0 auto; }
+  .facilities04 .blk .facilities-text {
+    margin-bottom: 1.0rem;
+    text-align: center; }
+    .facilities04 .blk .facilities-text p {
+      font-size: 22px;
+      font-weight: bold;
+      color: #E58500;
+      line-height: 1.4; }
+  .facilities04 .blk .hospital-img {
+    margin-bottom: 20px;
+    text-align: center; }
+  .facilities04 .blk .col {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px; }
+    .facilities04 .blk .col li {
+      width: 30%;
+      margin-bottom: 1.2rem; }
+      .facilities04 .blk .col li img {
+        display: inline-block;
+        width: 100%; }
+      .facilities04 .blk .col li h3 {
+        margin-top: 0.4rem; }
+@media screen and (max-width: 768px) {
+  .facilities04 .blk {
+    margin: 0 auto;
+    padding: 0 2%;
+    margin-top: 1.5rem; }
+    .facilities04 .blk .facilities-text {
+      margin: 1.0rem 0.5rem;
+      text-align: left; }
+      .facilities04 .blk .facilities-text p {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #E58500;
+        margin-bottom: 0;
+        line-height: 1.6; }
+    .facilities04 .blk .hospital-img {
+      text-align: center;
+      margin: 2.5rem 0; }
+      .facilities04 .blk .hospital-img img {
+        width: 100%; }
+    .facilities04 .blk .hospital-img-list {
+      margin-bottom: 3.0rem; }
+    .facilities04 .blk .col {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 2.0rem; }
+      .facilities04 .blk .col li {
+        width: 44%;
+        margin-bottom: 2.0rem;
+        margin-right: 0; }
+        .facilities04 .blk .col li img {
+          display: inline-block;
+          width: 100%; }
+        .facilities04 .blk .col li h3 {
+          font-size: 1.6rem;
+          font-weight: normal;
+          margin-top: 0.5rem;
+          text-align: center; } }
+
+/*------------ページ05service--------------
+------------------------------------------*/
+.service05 ul {
+  padding-left: 2.0rem; }
+.service05 .corseArea {
+  list-style: none;
+  padding-left: 0; }
+.service05 .clr p.bluefont {
+  font-size: 22px;
+  font-weight: bold;
+  color: #E58500;
+  margin-bottom: 1.0rem;
+  line-height: 1.4; }
+.service05 .clr p.explan {
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem; }
+.service05 .clr h3 {
+  margin-bottom: 2.0rem;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  font-size: 1.7rem;
+  position: relative;
+  left: -0.8rem;
+  border-bottom: 1.0px dashed #DDD9C6; }
+.service05 .clr h3::before {
+  content: url(../images/top/squear.png);
+  margin-right: 0.8rem; }
+.service05 .clr h4 {
+  margin: 4.0rem 0 1.0rem 0; }
+.service05 .clr .pc-wrap {
+  display: flex;
+  align-items: center; }
+  .service05 .clr .pc-wrap .pc-left {
+    width: 70%;
+    margin-right: 2.0rem; }
+  .service05 .clr .pc-wrap .pc-right {
+    width: 30%; }
+    .service05 .clr .pc-wrap .pc-right img {
+      display: block;
+      width: 100%; }
+.service05 .clr ul.careful {
+  margin-bottom: 3.0rem; }
+  .service05 .clr ul.careful li {
+    margin-bottom: 1.1rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.1rem; }
+.service05 .clr .pricetable .sp-p {
+  display: none; }
+.service05 .clr .pricetable img {
+  width: 100%; }
+.service05 .clr .trim-wrap .corseArea {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between; }
+  .service05 .clr .trim-wrap .corseArea .corse {
+    width: 49%; }
+    .service05 .clr .trim-wrap .corseArea .corse img {
+      display: block;
+      width: 100%; }
+.service05 .clr .trim-wrap .sp-ba {
+  display: none; }
+.service05 .clr .trim-wrap .pc-ba {
+  width: 100%;
+  margin-bottom: 5.0rem; }
+@media screen and (max-width: 768px) {
+  .service05 .clr {
+    padding: 2.0rem 3%; }
+    .service05 .clr h3 {
+      left: 0; }
+    .service05 .clr p.bluefont {
+      font-size: 1.8rem;
+      line-height: 1.6; }
+    .service05 .clr p.explan {
+      font-size: 1.4rem;
+      line-height: 1.8; }
+    .service05 .clr ul.careful li {
+      line-height: 1.6; }
+    .service05 .clr .pc-wrap {
+      flex-direction: column; }
+      .service05 .clr .pc-wrap .pc-left,
+      .service05 .clr .pc-wrap .pc-right {
+        margin: 0 auto; }
+      .service05 .clr .pc-wrap .pc-left {
+        width: 100%;
+        margin-bottom: 2.0rem; }
+      .service05 .clr .pc-wrap .pc-right {
+        width: 80%; }
+    .service05 .clr .trim-wrap .corseArea {
+      flex-direction: column; }
+      .service05 .clr .trim-wrap .corseArea .corse {
+        width: 100%;
+        margin: 0 auto; }
+        .service05 .clr .trim-wrap .corseArea .corse img {
+          margin-bottom: 1.0rem; }
+    .service05 .clr .trim-wrap .sp-ba {
+      display: block;
+      width: 100%;
+      margin-bottom: 5.0rem; }
+    .service05 .clr .trim-wrap .pc-ba {
+      display: none; }
+    .service05 .clr .pricetable .sp-p {
+      display: block; }
+    .service05 .clr .pricetable .pc-p {
+      display: none; } }
+
+/*------------ページ02about----------------
+------------------------------------------*/
+.about02 .abr h3 {
+  margin-bottom: 2.0rem;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  font-size: 1.7rem;
+  position: relative;
+  left: -0.8rem;
+  border-bottom: 1.0px dashed #DDD9C6; }
+.about02 .abr h3::before {
+  content: url(../images/top/squear.png);
+  margin-right: 0.8rem; }
+.about02 .abr p.bluefont {
+  font-size: 22px;
+  font-weight: bold;
+  color: #E58500;
+  margin-bottom: 1.0rem;
+  line-height: 1.4; }
+.about02 .abr p.explan {
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem; }
+.about02 .abr .aisatsu-wrap {
+  margin-bottom: 5.0rem; }
+.about02 .abr .staff-wrap {
+  margin-bottom: 5.0rem; }
+  .about02 .abr .staff-wrap .staff-content .doctor {
+    display: flex;
+    margin-bottom: 3.0rem; }
+    .about02 .abr .staff-wrap .staff-content .doctor .doctor-img {
+      width: 30%; }
+      .about02 .abr .staff-wrap .staff-content .doctor .doctor-img img {
+        width: 100%; }
+    .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro {
+      width: 70%;
+      margin-left: 3.0rem; }
+      .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro p {
+        line-height: 1.6;
+        letter-spacing: 0; }
+      .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro p.message {
+        padding: 0; }
+      .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro .doctor-name {
+        font-weight: bold;
+        line-height: 2.0;
+        font-size: 1.6rem; }
+      .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro p.reki {
+        margin-top: 1.4rem; }
+      .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro dl {
+        line-height: 1.5; }
+        .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro dl dt {
+          float: left; }
+        .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro dl dd {
+          margin-left: 8.0rem; }
+  .about02 .abr .staff-wrap .staff-content .narse .narse-li {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between; }
+    .about02 .abr .staff-wrap .staff-content .narse .narse-li li {
+      width: 28%;
+      text-align: center;
+      padding: 2.0rem 1.0rem; }
+      .about02 .abr .staff-wrap .staff-content .narse .narse-li li img {
+        width: 70%; }
+      .about02 .abr .staff-wrap .staff-content .narse .narse-li li p {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 0.6rem; }
+      .about02 .abr .staff-wrap .staff-content .narse .narse-li li .message {
+        font-size: 1.2rem;
+        line-height: 1.3;
+        text-align: left; }
+.about02 .abr .access-wrap {
+  margin-bottom: 5.0rem; }
+  .about02 .abr .access-wrap .access-content .access-nav {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 3.0rem; }
+    .about02 .abr .access-wrap .access-content .access-nav .access-left {
+      width: 60%;
+      margin-right: 2.0rem; }
+      .about02 .abr .access-wrap .access-content .access-nav .access-left dl {
+        line-height: 1.6;
+        font-size: 1.5rem;
+        margin-bottom: 1.0rem; }
+        .about02 .abr .access-wrap .access-content .access-nav .access-left dl dt {
+          font-weight: bold; }
+        .about02 .abr .access-wrap .access-content .access-nav .access-left dl dd img {
+          height: 30px; }
+      .about02 .abr .access-wrap .access-content .access-nav .access-left .exp1 {
+        margin-top: 2.0rem;
+        line-height: 1.4;
+        letter-spacing: 0.1rem; }
+        .about02 .abr .access-wrap .access-content .access-nav .access-left .exp1 span {
+          font-weight: bold; }
+      .about02 .abr .access-wrap .access-content .access-nav .access-left .acc {
+        display: flex; }
+        .about02 .abr .access-wrap .access-content .access-nav .access-left .acc .acc-left {
+          width: 37%; }
+        .about02 .abr .access-wrap .access-content .access-nav .access-left .acc .acc-right {
+          width: 63%;
+          margin-left: 1.5rem; }
+    .about02 .abr .access-wrap .access-content .access-nav .access-right {
+      width: 40%; }
+      .about02 .abr .access-wrap .access-content .access-nav .access-right img {
+        width: 100%; }
+  .about02 .abr .access-wrap .access-content .map {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden; }
+  .about02 .abr .access-wrap .access-content .map iframe,
+  .about02 .abr .access-wrap .access-content .map object,
+  .about02 .abr .access-wrap .access-content .map embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #DDD9C6; }
+@media screen and (max-width: 768px) {
+  .about02 .abr {
+    padding: 2.0rem 3%; }
+    .about02 .abr h3 {
+      left: 0; }
+    .about02 .abr p.bluefont {
+      font-size: 1.8rem;
+      line-height: 1.6; }
+    .about02 .abr p.explan {
+      font-size: 1.4rem;
+      line-height: 1.8; }
+    .about02 .abr .staff-wrap {
+      margin-bottom: 3.5rem; }
+      .about02 .abr .staff-wrap .staff-content .doctor {
+        flex-direction: column; }
+        .about02 .abr .staff-wrap .staff-content .doctor .doctor-img {
+          width: 100%;
+          text-align: center; }
+          .about02 .abr .staff-wrap .staff-content .doctor .doctor-img img {
+            width: 70%; }
+        .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro {
+          width: 100%;
+          margin: 2.0rem 0; }
+          .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro p {
+            line-height: 1.8; }
+          .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro p.occupation,
+          .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro p.doctor-name {
+            text-align: center; }
+          .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro p.message {
+            padding: 0.5rem; }
+          .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro p.reki {
+            font-size: 1.4rem;
+            text-align: center;
+            margin-top: 1.2rem; }
+          .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro dl {
+            margin-top: 1.0rem;
+            font-size: 1.3rem;
+            line-height: 1.8; }
+            .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro dl dt {
+              float: left; }
+            .about02 .abr .staff-wrap .staff-content .doctor .doctor-intro dl dd {
+              margin-left: 6.0rem; }
+      .about02 .abr .staff-wrap .staff-content .narse .narse-li li {
+        width: 50%;
+        padding: 1.0rem 0;
+        margin-bottom: 1.5rem; }
+    .about02 .abr .access-wrap .access-content .access-nav {
+      flex-direction: column;
+      margin-bottom: 1.5rem; }
+      .about02 .abr .access-wrap .access-content .access-nav .access-left {
+        width: 100%;
+        margin-right: 0; }
+        .about02 .abr .access-wrap .access-content .access-nav .access-left dl {
+          margin-bottom: 1.5rem; }
+        .about02 .abr .access-wrap .access-content .access-nav .access-left .exp1 {
+          margin-top: 2.0rem;
+          line-height: 1.4;
+          letter-spacing: 0.1rem; }
+          .about02 .abr .access-wrap .access-content .access-nav .access-left .exp1 span {
+            font-weight: bold; }
+        .about02 .abr .access-wrap .access-content .access-nav .access-left .acc {
+          display: flex;
+          flex-direction: column;
+          line-height: 1.7;
+          letter-spacing: 0.1px; }
+          .about02 .abr .access-wrap .access-content .access-nav .access-left .acc .acc-left {
+            width: 100%; }
+          .about02 .abr .access-wrap .access-content .access-nav .access-left .acc .acc-right {
+            width: 90%;
+            margin-left: 2.0rem; }
+      .about02 .abr .access-wrap .access-content .access-nav .access-right {
+        width: 100%;
+        margin-top: 1.5rem; } }
+
+/*------------ページ03guide----------------
+------------------------------------------*/
+.guide03 ul {
+  padding-left: 2.0rem; }
+.guide03 .gui h3 {
+  margin-bottom: 2.0rem;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  font-size: 1.7rem;
+  position: relative;
+  left: -0.8rem;
+  border-bottom: 1.0px dashed #DDD9C6; }
+.guide03 .gui h3::before {
+  content: url(../images/top/squear.png);
+  margin-right: 0.8rem; }
+.guide03 .gui h4 {
+  margin: 4.0rem 0 1.0rem 0; }
+.guide03 .gui .pc-wrap {
+  display: flex; }
+  .guide03 .gui .pc-wrap .pc-left {
+    width: 70%;
+    margin-right: 2.0rem; }
+  .guide03 .gui .pc-wrap .pc-right {
+    width: 30%; }
+    .guide03 .gui .pc-wrap .pc-right img {
+      display: block;
+      width: 100%; }
+.guide03 .gui ul.careful {
+  margin-bottom: 3.0rem; }
+  .guide03 .gui ul.careful li {
+    margin-bottom: 1.1rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.1rem; }
+.guide03 .gui .hajimete-wrap {
+  margin-bottom: 5.0rem; }
+  .guide03 .gui .hajimete-wrap .target {
+    margin: 2.0rem 0 0 1.0rem; }
+    .guide03 .gui .hajimete-wrap .target p.inuneko {
+      font-size: 1.4rem;
+      margin-bottom: 1.0rem; }
+    .guide03 .gui .hajimete-wrap .target .pc-right img {
+      width: 90%; }
+  .guide03 .gui .hajimete-wrap .jisan {
+    margin: 2.0rem 0 0 1.0rem; }
+    .guide03 .gui .hajimete-wrap .jisan .jisan-li {
+      margin-top: 1.0rem; }
+      .guide03 .gui .hajimete-wrap .jisan .jisan-li li {
+        margin-bottom: 1.0rem; }
+    .guide03 .gui .hajimete-wrap .jisan .pc-right img {
+      width: 80%;
+      margin-left: 1.0rem; }
+  .guide03 .gui .hajimete-wrap .flow {
+    margin: 2.0rem 0 0 1.0rem; }
+    .guide03 .gui .hajimete-wrap .flow .pc-left {
+      width: 100%; }
+      .guide03 .gui .hajimete-wrap .flow .pc-left .flow-fig {
+        width: 100%; }
+        .guide03 .gui .hajimete-wrap .flow .pc-left .flow-fig .flow-li p {
+          font-size: 1.6rem;
+          line-height: 3.0;
+          font-weight: bold;
+          text-align: center;
+          background-color: rgba(206, 236, 231, 0.6);
+          border-radius: 10px; }
+        .guide03 .gui .hajimete-wrap .flow .pc-left .flow-fig .squear::after {
+          content: url(../images/guide/sque.png);
+          display: block;
+          text-align: center;
+          margin: 0.5rem; }
+        .guide03 .gui .hajimete-wrap .flow .pc-left .flow-fig p.back {
+          padding: 0.8rem 0.8rem 0 0.8rem;
+          font-size: 1.2rem; }
+    .guide03 .gui .hajimete-wrap .flow .pc-right .monshin {
+      margin-bottom: 1.0rem; }
+.guide03 .gui .shinryou-wrap {
+  margin-bottom: 5.0rem; }
+  .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border: 1px solid #f0eee4; }
+    .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li .head {
+      width: 30%;
+      background-color: rgba(206, 236, 231, 0.6);
+      display: flex;
+      justify-content: center; }
+      .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li .head h5 {
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center; }
+    .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li .foot {
+      width: 70%;
+      padding: 2.0rem 1.0rem; }
+      .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li .foot p {
+        line-height: 1.7;
+        letter-spacing: 0.1rem; }
+      .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li .foot span {
+        font-weight: bold; }
+@media screen and (max-width: 768px) {
+  .guide03 .gui {
+    padding: 2.0rem 3%; }
+    .guide03 .gui h3 {
+      left: 0; }
+    .guide03 .gui .pc-wrap {
+      display: flex;
+      flex-direction: column; }
+      .guide03 .gui .pc-wrap .pc-left {
+        width: 100%;
+        margin-right: 0; }
+      .guide03 .gui .pc-wrap .pc-right {
+        width: 100%; }
+    .guide03 .gui .hajimete-wrap .target {
+      margin: 2.0rem 0 0 0; }
+      .guide03 .gui .hajimete-wrap .target .pc-right {
+        margin-top: 3.0rem; }
+        .guide03 .gui .hajimete-wrap .target .pc-right img {
+          margin: 0 auto; }
+    .guide03 .gui .hajimete-wrap .jisan {
+      margin: 2.0rem 0 0 0; }
+      .guide03 .gui .hajimete-wrap .jisan .pc-right img {
+        margin: 0 auto; }
+    .guide03 .gui .hajimete-wrap .flow {
+      margin: 2.0rem 0 0 0; }
+      .guide03 .gui .hajimete-wrap .flow .pc-left {
+        margin-bottom: 2.0rem; }
+      .guide03 .gui .hajimete-wrap .flow .pc-right img {
+        width: 31%;
+        margin-right: 7px;
+        float: left; }
+    .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li {
+      display: flex;
+      flex-direction: column; }
+      .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li .head {
+        width: 100%;
+        line-height: 3.0; }
+      .guide03 .gui .shinryou-wrap .shinryou-content .shinryou-li .foot {
+        width: 95%; } }
+
+/*------------ページ01top------------------
+------------------------------------------*/
+.top01 {
+  width: 100%;
+  grid-template: "......" "header" "main  " "......" 10px "footer"; }
+
+@media screen and (min-width: 768px) {
+  body.top01 {
+    max-width: 980px;
+    grid-template: "... ...... ...... ......  ..." 15px "... header header header  ..." "... ...... ...... ......  ..." 15px "... navi   navi   navi    ..." "... ...... ...... ......  ..." 10px "... main   main   main    ..." "... ...... ...... ......  ..." 10px "... footer footer footer  ..." "... ...... ...... ......  ..." 10px/15px 190px 40px minmax(300px, 1fr) 15px;
+    /*最小300px以上で最大いっぱい*/ } }
+.top01 .tpr #photo {
+  max-width: 950px;
+  padding-top: 46%;
+  margin: 0 auto;
+  text-align: left;
+  position: relative; }
+  .top01 .tpr #photo img {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute; }
+.top01 .tpr #sp-photo {
+  display: none; }
+.top01 .tpr .news-wrap h3 {
+  margin-top: 3.0rem;
+  margin-bottom: 2.0rem; }
+.top01 .tpr .annai-wrap h3 {
+  margin-top: 3.0rem;
+  margin-bottom: 4.0rem; }
+.top01 .tpr h3 {
+  padding-top: 4px;
+  padding-bottom: 5px;
+  font-size: 1.7rem;
+  position: relative;
+  left: -0.8rem;
+  border-bottom: 1.0px dashed #DDD9C6; }
+.top01 .tpr h3::before {
+  content: url(../images/top/squear.png);
+  margin-right: 0.8rem; }
+.top01 .tpr .spbr {
+  display: none; }
+.top01 .tpr .lis::before {
+  content: url(../images/top/link.png);
+  margin-right: 0.8rem; }
+.top01 .tpr .news-wrap .news-content {
+  display: flex; }
+  .top01 .tpr .news-wrap .news-content .news-left {
+    width: 50%;
+    margin-right: 1.5rem; }
+    .top01 .tpr .news-wrap .news-content .news-left dl {
+      line-height: 2.0; }
+      .top01 .tpr .news-wrap .news-content .news-left dl dt {
+        float: left;
+        letter-spacing: 0; }
+      .top01 .tpr .news-wrap .news-content .news-left dl dd {
+        margin-left: 11.0rem; }
+        .top01 .tpr .news-wrap .news-content .news-left dl dd a {
+          text-decoration: none;
+          color: #000000; }
+    .top01 .tpr .news-wrap .news-content .news-left .lis {
+      text-align: right;
+      margin-right: 5.0rem; }
+      .top01 .tpr .news-wrap .news-content .news-left .lis a {
+        text-decoration: none;
+        color: #000000; }
+  .top01 .tpr .news-wrap .news-content .news-right {
+    width: 50%;
+    margin-left: 1.5rem; }
+    .top01 .tpr .news-wrap .news-content .news-right img {
+      width: 100%; }
+.top01 .tpr .annai-wrap {
+  margin-bottom: 5.0rem; }
+  .top01 .tpr .annai-wrap .annai-content {
+    display: flex; }
+    .top01 .tpr .annai-wrap .annai-content .annai-left {
+      width: 50%;
+      margin-right: 1.5rem; }
+      .top01 .tpr .annai-wrap .annai-content .annai-left dl {
+        line-height: 1.6; }
+        .top01 .tpr .annai-wrap .annai-content .annai-left dl dt {
+          font-size: 1.8rem;
+          font-weight: bold; }
+        .top01 .tpr .annai-wrap .annai-content .annai-left dl .tel img {
+          height: 30px;
+          margin: 0.5rem 0; }
+      .top01 .tpr .annai-wrap .annai-content .annai-left .sche-img {
+        margin: 2.0rem 0 0.5rem 0; }
+        .top01 .tpr .annai-wrap .annai-content .annai-left .sche-img img {
+          width: 90%; }
+      .top01 .tpr .annai-wrap .annai-content .annai-left .exp1,
+      .top01 .tpr .annai-wrap .annai-content .annai-left .exp2,
+      .top01 .tpr .annai-wrap .annai-content .annai-left .exp3 {
+        margin-bottom: 3.0rem;
+        line-height: 1.4;
+        letter-spacing: 0.1rem; }
+        .top01 .tpr .annai-wrap .annai-content .annai-left .exp1 span,
+        .top01 .tpr .annai-wrap .annai-content .annai-left .exp2 span,
+        .top01 .tpr .annai-wrap .annai-content .annai-left .exp3 span {
+          font-weight: bold; }
+      .top01 .tpr .annai-wrap .annai-content .annai-left .exp3 img {
+        margin-top: 0.5rem;
+        width: 90%; }
+      .top01 .tpr .annai-wrap .annai-content .annai-left .lis a {
+        text-decoration: none;
+        color: #000000; }
+    .top01 .tpr .annai-wrap .annai-content .annai-right {
+      width: 50%;
+      margin-left: 1.5rem; }
+      .top01 .tpr .annai-wrap .annai-content .annai-right .ggmap {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 3.0rem;
+        border: 1px solid #DDD9C6; }
+      .top01 .tpr .annai-wrap .annai-content .annai-right .ggmap iframe,
+      .top01 .tpr .annai-wrap .annai-content .annai-right .ggmap object,
+      .top01 .tpr .annai-wrap .annai-content .annai-right .ggmap embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      .top01 .tpr .annai-wrap .annai-content .annai-right .exp1,
+      .top01 .tpr .annai-wrap .annai-content .annai-right .exp2,
+      .top01 .tpr .annai-wrap .annai-content .annai-right .exp3 {
+        margin-bottom: 3.0rem;
+        line-height: 1.4;
+        letter-spacing: 0.1rem; }
+        .top01 .tpr .annai-wrap .annai-content .annai-right .exp1 span,
+        .top01 .tpr .annai-wrap .annai-content .annai-right .exp2 span,
+        .top01 .tpr .annai-wrap .annai-content .annai-right .exp3 span {
+          font-weight: bold; }
+      .top01 .tpr .annai-wrap .annai-content .annai-right .exp3 img {
+        width: 100%;
+        border: 1px solid #DDD9C6; }
+      .top01 .tpr .annai-wrap .annai-content .annai-right .acc {
+        display: flex; }
+        .top01 .tpr .annai-wrap .annai-content .annai-right .acc .acc-left {
+          width: 35%; }
+        .top01 .tpr .annai-wrap .annai-content .annai-right .acc .acc-right {
+          width: 65%;
+          margin-left: 2.0rem; }
+@media screen and (max-width: 768px) {
+  .top01 .tpr #photo {
+    display: none; }
+  .top01 .tpr #sp-photo {
+    display: block;
+    max-width: 768px;
+    padding-top: 67%;
+    margin: 0 auto;
+    text-align: left;
+    position: relative; }
+    .top01 .tpr #sp-photo img {
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute; }
+  .top01 .tpr h3 {
+    left: 0; }
+  .top01 .tpr .pcbr {
+    display: none; }
+  .top01 .tpr .spbr {
+    display: block; }
+  .top01 .tpr .news-wrap,
+  .top01 .tpr .annai-wrap {
+    padding: 0 3%; }
+  .top01 .tpr .news-wrap .news-content {
+    display: flex;
+    flex-direction: column; }
+    .top01 .tpr .news-wrap .news-content .news-left {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 2.0rem; }
+      .top01 .tpr .news-wrap .news-content .news-left dl {
+        line-height: 1.5;
+        margin-bottom: 1.0rem; }
+        .top01 .tpr .news-wrap .news-content .news-left dl dd {
+          margin-bottom: 1.0rem;
+          margin-left: 9.0rem; }
+      .top01 .tpr .news-wrap .news-content .news-left .lis {
+        margin-right: 0.8rem; }
+    .top01 .tpr .news-wrap .news-content .news-right {
+      width: 100%;
+      margin-left: 0; }
+      .top01 .tpr .news-wrap .news-content .news-right img {
+        width: 100%; }
+  .top01 .tpr .annai-wrap {
+    margin-bottom: 2.0rem; }
+    .top01 .tpr .annai-wrap h3 {
+      margin-bottom: 2.0rem; }
+    .top01 .tpr .annai-wrap .annai-content {
+      display: flex;
+      flex-direction: column; }
+      .top01 .tpr .annai-wrap .annai-content .annai-left {
+        width: 100%; }
+        .top01 .tpr .annai-wrap .annai-content .annai-left .sche-img {
+          margin: 1.0rem 0 0.5rem 0; }
+          .top01 .tpr .annai-wrap .annai-content .annai-left .sche-img img {
+            width: 100%; }
+        .top01 .tpr .annai-wrap .annai-content .annai-left .exp3 img {
+          width: 100%; }
+      .top01 .tpr .annai-wrap .annai-content .annai-right {
+        width: 100%;
+        margin-left: 0; }
+        .top01 .tpr .annai-wrap .annai-content .annai-right span {
+          font-weight: bold;
+          margin-bottom: 1.0rem; }
+        .top01 .tpr .annai-wrap .annai-content .annai-right .acc {
+          display: flex;
+          flex-direction: column; }
+          .top01 .tpr .annai-wrap .annai-content .annai-right .acc .acc-left {
+            width: 100%; }
+          .top01 .tpr .annai-wrap .annai-content .annai-right .acc .acc-right {
+            width: 90%;
+            margin-left: 2.3rem; } }
+
+/*# sourceMappingURL=style.css.map */

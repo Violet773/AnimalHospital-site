@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>みなな動物病院（押上にある犬と猫の動物病院）</title>
+    <meta name="description" content="東京都墨田区押上にある犬と猫の動物病院です。遅い時間（21時）までやっているので仕事後でも安心。トリミングと
+    お預り（ペットホテル）のサービスもしています。病院からスカイツリーも眺められますよ！">
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- jQuery 
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+</head>
+
+<body class="guide03">
+
+    <header>
+        <div class="logo-col">
+            <h1><a href="index.html"><img src="images/top/logo.png" alt="みなな動物病院"></a></h1>
+        </div>
+        <div class="info-col">
+            <p><img id="denwa" src="images/top/denwa2.png" alt="denwa"></p>
+            <dl class="reception">
+                <dt>受付</dt>
+                <dd>午前9:00～午後9:00</dd>
+            </dl>
+            <dl class="holiday">
+                <dt>休診日</dt>
+                <dd>木曜・日曜・祝日</dd>
+            </dl>
+        </div>
+        <div class="menubtn"><img src="images/top/btn-menu2.png" style="width: 40px; height: 38px;" alt=""></div>
+        <ul class="sp-menubtn_toggle">
+          <li><a href="index.html"><img src="images/top/t-home.png" alt=""></a></li>
+          <li><a href="about.html"><img src="images/top/t-touin.png" alt=""></a></li>
+          <li><a href="guide.html"><img src="images/top/t-shinryou.png" alt=""></a></li>
+          <li><a href="facilities.html"><img src="images/top/t-shisetsu.png" alt=""></a></li>
+          <li><a href="service.html"><img src="images/top/t-service.png" alt=""></a></li>
+        </ul>
+        <script>
+            $(document).ready(function(){
+              $(".menubtn").click(function(){
+                $(".sp-menubtn_toggle").slideToggle();
+              });
+            });
+        </script>
+    </header>
+    
+    <nav class="gnav">
+        <div class="menu-navi">
+            <ul class="menu-navi-li">
+              <li><a href="index.html"><img src="images/top/t-home.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="about.html"><img src="images/top/t-touin.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="guide.html"><img src="images/top/t-shinryou.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="facilities.html"><img src="images/top/t-shisetsu.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="service.html"><img src="images/top/t-service.png" alt=""></a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <aside class="sub-col">
+        <div class="page-info">
+            <h2><img src="images/top/t-shinryou.png" alt="03タイトル"></h2>
+            <p><a href="#hajimete">はじめての方へ</a></p>
+            <p><a href="#shinryou">診療内容</a></p>
+        </div>
+        <div id="hospital-info">
+			<section class="sec">
+				<h3>病院案内</h3>
+				<dl>
+					<dt>みなな動物病院</dt>
+					<dd>〒111-1111</dd>
+					<dd>東京都墨田区押上1-2-3</dd>
+					<dd class="tel"><img src="images/top/denwa2.png" alt="電話番号"></dd>
+				</dl>
+			</section>
+			<section class="sec">
+				<h3>診療時間</h3>
+				<p>月曜〜土曜/<p>
+				<p>(休診日 / 木・日・祝日)</p>
+				<p>午前　9:00〜12:00</p>
+				<p>午後　4:00〜9:00</p>
+			</section>
+			
+			<section>
+				<h3>診察対象</h3>
+				<p style="font-weight:bold;">犬・猫</p>
+			</section>
+		</div>
+    </aside>
+    
+    <main class="gui">
+        
+        <div class="hajimete-wrap" id="hajimetek">
+            <h3>はじめての方へ</h3>
+            
+            <h4>-診療対象</h4>
+            <div class="target pc-wrap">
+                <div class="pc-left">
+                    <p class="inuneko">犬・猫</p>
+                    <p class="inuneko-nav">※そのほかの動物については、事前にご相談ください。</p>
+                </div>
+                <div class="pc-right">
+                    <img class="monshin" src="images/guide/inuneko2.png" alt="">
+                </div>
+            </div>  
+                
+            <h4>-お持ちいただきたいもの</h4>
+            <div class="jisan pc-wrap">
+                <div class="pc-left">
+                    <p>これまでの治療歴が分かる資料があればお持ちください。</p>
+                    <ul class="jisan-li">
+                        <li>健康診断書</li>
+                        <li>混合ワクチンや狂犬病などの予防接種の証明書</li>
+                        <li>血液検査などの結果</li>
+                    </ul>
+                </div>
+                <div class="pc-right">
+                    <img class="monshin" src="images/guide/03_monshin.jpg" alt="">
+                </div>
+            </div>                
+            
+            <h4>-診療の流れ</h4>
+            <div class="pc-wrap flow">
+                <div class="pc-left">
+                    <div class="flow-fig">
+                        <div class="squear flow-li"><p>問診表の記入</p></div>
+                        <div class="flow-li"><p>問診表に基づいて診察室での問診</p></div>
+                        <p class="squear back">ペットの症状や普段の食事などお聞きします。これまでの病歴や治療歴の資料があればお持ちください。</p>
+                        <div class="squear flow-li"><p>触診・身体検査</p></div>
+                        <div class="squear flow-li"><p>必要に応じて検査</p></div>
+                        <div class="flow-li"><p>治療説明</p></div>
+                        <p class="squear back">治療の選択肢や方針に関して説明をいたします。飼い主様の同意が得られた内容で治療開始となります。</p>
+                        <div class="flow-li"><p>治療</p></div>
+                    </div>
+                </div>
+                <!--<div class="pc-right">-->
+                <!--    <img class="monshin" src="images/guide/03_monshin.jpg" alt="">-->
+                <!--    <img class="monshin" src="images/facilities/04_shinsatsu-min.png" alt="">-->
+                <!--    <img class="monshin" src="images/facilities/04_ren-min.png" alt="">-->
+                <!--</div>-->
+            </div>
+            
+            <h4>-お願い</h4>
+            <ul class="careful">
+				<li>飼い主さんは動物の状態、状況が分かる方、できればいつもお世話をしている方がご来院下さい。</li>
+				<li>ご来院される際は、動物を移動用のキャリー内、もしくはリードをつけていらしてください。</li>
+				<li>診察までの待ち時間は、他の動物同士の接触がないようお願いします。</li>
+				<li>他院からの転院もしくはセカンドオピニオンをお考えの場合は、事前にご連絡をお願いします。</li>
+				<li>時間外の診察になる場合は必ず事前の電話連絡をお願いします。</li>
+			</ul>
+			
+        </div>
+        
+        <div class="shinryou-wrap" id="shinryou">
+            <h3>診療内容</h3>
+            <div class="shinryou-content">
+                <div class="shinryou-li">
+                    <div class="head"><h5>一般診療</h5></div>
+                    <div class="foot">
+                        <p>動物の診療は内科・外科をはじめ腫瘍科・皮膚科・眼科・循環器科など専門性は多岐にわたります。どの分野で診察を受けたらよいか
+                        分からないことも多いと思います。私たちはどんな状態の動物でも適切な判断が出来る様に日々努力しております。<br>
+                        その知識の下で専門診療が必要な場合は専門病院をご紹介させていただきます。<br>
+                        いつも一緒に過ごしている飼い主様が違和感を感じる時は何かあることが多いです。「いつもと何か様子が違う」と思う事があれば些
+                        細な事でも構いませんのでご相談ください。</p>
+                    </div>
+                </div>
+                <div class="shinryou-li">
+                    <div class="head"><h5>各種予防接種</h5></div>
+                    <div class="foot">
+                        <p>当院では予防医療にも力を入れております。<br><br>
+                        獣医療の発達により動物の寿命は伸びてきています。予防できる病気は積極的で集中的な治療が必要な事が多く、命に関わる事もあります。
+                        その病気にかかると「予防をしていれば・・・」と飼い主様も動物も辛い思いをすることになります。<br><br>
+                        <span>予防接種（混合ワクチン、狂犬病ワクチン）、フィラリア予防、寄生虫予防</span></p>
+                    </div>
+                </div>
+                <div class="shinryou-li">
+                    <div class="head"><h5>不妊手術</h5></div>
+                    <div class="foot">
+                        <p><span>去勢手術</span><br>
+                        雄の陰嚢内の精巣を切除する手術です。<br>
+                        問題行動の抑制、前立腺疾患、精巣腫瘍、肛門周囲腺腫、会陰ヘルニアなどの予防につながります。<br><br>
+                        <span>避妊手術</span><br>
+                        雌の卵巣と子宮を切除する手術です。<br>
+                        問題行動の抑制、乳腺腫瘍、子宮蓄膿症、卵巣・子宮腫瘍などの予防につながります。</p>
+                    </div>
+                </div>
+                <div class="shinryou-li">
+                    <div class="head"><h5>各種外科手術</h5></div>
+                    <div class="foot">
+                        <p>手術でしか治癒できない病気やケガの場合だけでなく、内科治療に反応しない場合や手術することがその仔とご家族の負担を最小にすると判断
+                        した場合にお勧めしております。<br><br>
+                        麻酔の危険性、手術、術後の注意点、合併症について十分お話をして、ご納得いただいてから行います。<br><br>
+                        また、動物にとってより安全な麻酔、より痛みの少ない手術を心掛けて行います。</p>
+                    </div>
+                </div>
+                <div class="shinryou-li">
+                    <div class="head"><h5>健康診断</h5></div>
+                    <div class="foot">
+                        <p>みなな動物病院では健康診断を通年で実施しています。<br><br>
+                        <span>犬</span><br>
+                        6才まで：血液検査:血球計算、生化学検査18項目<br>
+                        6歳以上：血液検査:血球計算、生化学検査18項目、甲状腺ホルモン測定<br><br>
+                        <span>猫</span><br>
+                        6才まで：血液検査:血球計算、生化学検査16項目<br>
+                        6才以上：血液検査:血球計算、生化学検査16項目、甲状腺ホルモン測定</p>
+                    </div>
+                </div>
+                <p class="hoka">その他については、ご相談ください。</p>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <div id="pagetop">
+            <a href="#" title="ページトップへ" class="enable light"><img src="images/top/btn-pageup2.png" alt=""></a>
+        </div>
+        <div class="footer-navi">
+            <div class="info-col left-col">
+				<dl>
+					<dt><a href="/" class="home">みなな動物病院</a></dt>
+					<dd>〒111-1111　東京都墨田区押上1-2-3</dd>
+					<dd>TEL.0120-11-1111</dd>
+				</dl>
+			</div>
+			<div class="nav-col right-col">
+				<div id="footer-nav">
+					<ul>
+						<li class="sla"><a href="index.html">ホーム</a></li>
+						<li class="sla"><a href="about.html">当院について</a></li>
+						<li class="sla"><a href="guide.html">診療案内</a></li>
+						<li class="sla"><a href="facilities.html">施設紹介</a></li>
+						<li><a href="service.html">サービス</a></li>
+					</ul>
+				</div>
+				<p id="copyright">Copyright© MINANA animal hospital. All Rights Reserved.</p>
+			</div>
+        </div>
+        <script>
+            $(document).ready(function() {
+              var pagetop = $('#pagetop');
+                $(window).scroll(function () {
+                   if ($(this).scrollTop() > 100) {
+                        pagetop.fadeIn();
+                   } else {
+                        pagetop.fadeOut();
+                        }
+                   });
+                   pagetop.click(function () {
+                       $('body, html').animate({ scrollTop: 0 }, 500);
+                          return false;
+               });
+            });
+        </script>
+    </footer>
+    
+</body>
+</html>

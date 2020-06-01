@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>みなな動物病院（押上にある犬と猫の動物病院）</title>
+    <meta name="description" content="東京都墨田区押上にある犬と猫の動物病院です。遅い時間（21時）までやっているので仕事後でも安心。トリミングと
+    お預り（ペットホテル）のサービスもしています。病院からスカイツリーも眺められますよ！">
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- jQuery 
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+</head>
+
+<body class="service05">
+
+    <header>
+        <div class="logo-col">
+            <h1><a href="index.html"><img src="images/top/logo.png" alt="みなな動物病院"></a></h1>
+        </div>
+        <div class="info-col">
+            <p><img id="denwa" src="images/top/denwa2.png" alt="denwa"></p>
+            <dl class="reception">
+                <dt>受付</dt>
+                <dd>午前9:00～午後9:00</dd>
+            </dl>
+            <dl class="holiday">
+                <dt>休診日</dt>
+                <dd>木曜・日曜・祝日</dd>
+            </dl>
+        </div>
+        <div class="menubtn"><img src="images/top/btn-menu2.png" style="width: 40px; height: 38px;" alt=""></div>
+        <ul class="sp-menubtn_toggle">
+          <li><a href="index.html"><img src="images/top/t-home.png" alt=""></a></li>
+          <li><a href="about.html"><img src="images/top/t-touin.png" alt=""></a></li>
+          <li><a href="guide.html"><img src="images/top/t-shinryou.png" alt=""></a></li>
+          <li><a href="facilities.html"><img src="images/top/t-shisetsu.png" alt=""></a></li>
+          <li><a href="service.html"><img src="images/top/t-service.png" alt=""></a></li>
+        </ul>
+        <script>
+            $(document).ready(function(){
+              $(".menubtn").click(function(){
+                $(".sp-menubtn_toggle").slideToggle();
+              });
+            });
+        </script>
+    </header>
+    
+    <nav class="gnav">
+        <div class="menu-navi">
+            <ul class="menu-navi-li">
+              <li><a href="index.html"><img src="images/top/t-home.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="about.html"><img src="images/top/t-touin.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="guide.html"><img src="images/top/t-shinryou.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="facilities.html"><img src="images/top/t-shisetsu.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="service.html"><img src="images/top/t-service.png" alt=""></a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <aside class="sub-col">
+        <div class="page-info">
+            <h2><img src="images/top/t-service.png" alt="05タイトル"></h2>
+            <p><a href="#torimlink">トリミング</a></p>
+            <p><a href="#hotellink">ペットホテル</a></p>
+        </div>
+        <div id="hospital-info">
+			<section class="sec">
+				<h3>病院案内</h3>
+				<dl>
+					<dt>みなな動物病院</dt>
+					<dd>〒111-1111</dd>
+					<dd>東京都墨田区押上1-2-3</dd>
+					<dd class="tel"><img src="images/top/denwa2.png" alt="電話番号"></dd>
+				</dl>
+			</section>
+			<section class="sec">
+				<h3>診療時間</h3>
+				<p>月曜〜土曜/<p>
+				<p>(休診日 / 木・日・祝日)</p>
+				<p>午前　9:00〜12:00</p>
+				<p>午後　4:00〜9:00</p>
+			</section>
+			
+			<section>
+				<h3>診察対象</h3>
+				<p style="font-weight:bold;">犬・猫</p>
+			</section>
+		</div>
+    </aside>
+    
+    <main class="clr">
+        <div class="trim-wrap" id="torimlink">
+            <h3>トリミング（犬のみ）</h3>
+            <div class="pc-wrap">
+                <div class="pc-left">
+                    <p class="bluefont">経験豊富なトリマーが<br>丁寧にトリミング致します。</p>
+                    <p class="explan">ワンちゃんに優しいシャンプーを使用して熟練したトリマーが丁寧にトリミング致します。<br>
+                       トリミングには、美容面以外にも、日ごろの体調管理という大切な役割も担っています。また、皮膚の状態が悪い場合、
+                       トリミングは治療手段としても有効です。</p>
+                </div>
+                <div class="pc-right">
+                    <img src="images/service/trim.png" alt="">   
+                </div>
+            </div>                
+            <h4>-コース</h4>
+            <ul class="corseArea">
+                <li class="shampoo corse"><img src="images/service/s-corse2.png" alt="シャンプーコース"></li>
+                <li class="cut corse"><img src="images/service/c-corse2.png" alt="カットコース"></li>
+            </ul>
+            <h4>-料金（価格は全て税別です）</h4>
+            <div class="pricetable">
+                <img class="pc-p" src="images/service/pc-p-trim2.png" alt="">
+                <img class="sp-p" src="images/service/sp-p-trim2.png" alt="">
+            </div>
+            <h4>-注意事項</h4>
+            <ul class="careful">
+				<li>完全予約制になりますので、お電話またはご来院時にご予約ください。</li>
+				<li>わんちゃんねこちゃんの大きさ、毛玉の量や被毛の量に応じて追加料金を頂く場合がございます。</li>
+				<li>担当者以外のスタッフの補助が必要になった場合、時間に応じて追加料金を申し受ける場合がございます。</li>
+				<li>トリミング中、わんちゃんねこちゃんの健康状態・精神状態・行動等において変化が見られた場合は当院の判断によりトリミングを中止する場合がございますので予めご了承ください。</li>
+				<li>必要なノミダニ駆除を行っていないわんちゃんねこちゃんは当院の判断によりノミダニ駆除薬の使用をさせていただきます。</li>
+				<li>1年以内に混合ワクチンをされているわんちゃんねこちゃんに限らせていただきます。</li>
+				<li>初診でご利用時はカルテ登録料がかかります。</li>
+				<li>ご希望の方には無料でリボンをお付けいたします。</li>
+			</ul>
+			<img class="sp-ba" src="images/service/sp-ba.png" alt="">
+			<img class="pc-ba" src="images/service/pc-ba.png" alt="">
+        </div>
+        <div class="hotel-wrap" id="hotellink">
+            <h3>ペットホテル</h3>
+            <div class="pc-wrap">    
+                <div class="pc-left">
+                    <p class="bluefont">大切なご家族を、<br>責任をもってお預かりいたします。</p>
+                    <p class="explan">当院では獣医師による健康の確認やスタッフの決め細やかなケアで、大切なペットをお預かりいたします。<br>
+        				安心してお預けいただくため、動物の体調管理は十分気をつけておりますが、ご家族と離れての慣れない環境でのお泊まりとなりますので、
+        				万一体調を崩して治療が必要な場合は状況に応じて治療させていただきます。
+        			</p>
+            	</div>
+            	<div class="pc-right">
+        			<img src="images/service/pethotel-min.jpg" alt="">
+    			</div>
+    		</div>	
+			<h4>-料金（価格は全て税別です）</h4>
+			<div class="pricetable">
+			    <img class="pc-p" src="images/service/p-pc-hotel2.png" alt="ペットホテル料金">
+			    <img class="sp-p" src="images/service/p-sp-hotel2.png" alt="ペットホテル料金">
+			</div>    
+			<h4>-注意事項</h4>
+			<ul class="careful">
+				<li>当院でのペットホテルは完全予約制です。</li>
+				<li>当院にてカルテ登録があり、ねこちゃんでは１年以内の混合ワクチン、わんちゃんでは１年以内の混合ワクチン、狂犬病ワクチンをされている動物を対象とさせていただきます。</li>
+				<li>必要なノミダニ駆除を行っていないわんちゃんねこちゃんは当院の判断によりノミダニ駆除薬の使用をさせていただきます。</li>
+				<li>できればいつも食べ慣れているごはんをご持参ください。</li>
+				<li>お預かり、お迎えは診療時間内にお願いいたします。</li>
+				<li>病気、噛み癖、吠え続ける等お預かりできない場合がございます。</li>
+			</ul>
+        </div>
+    </main>
+    
+    <footer>
+        <div id="pagetop">
+            <a href="#" title="ページトップへ" class="enable light"><img src="images/top/btn-pageup2.png" alt=""></a>
+        </div>
+        <div class="footer-navi">
+            <div class="info-col left-col">
+				<dl>
+					<dt><a href="/" class="home">みなな動物病院</a></dt>
+					<dd>〒111-1111　東京都墨田区押上1-2-3</dd>
+					<dd>TEL.0120-11-1111</dd>
+				</dl>
+			</div>
+			<div class="nav-col right-col">
+				<div id="footer-nav">
+					<ul>
+						<li class="sla"><a href="index.html">ホーム</a></li>
+						<li class="sla"><a href="about.html">当院について</a></li>
+						<li class="sla"><a href="guide.html">診療案内</a></li>
+						<li class="sla"><a href="facilities.html">施設紹介</a></li>
+						<li><a href="service.html">サービス</a></li>
+					</ul>
+				</div>
+				<p id="copyright">Copyright© MINANA animal hospital. All Rights Reserved.</p>
+			</div>
+        </div>
+        <script>
+            $(document).ready(function() {
+              var pagetop = $('#pagetop');
+                $(window).scroll(function () {
+                   if ($(this).scrollTop() > 100) {
+                        pagetop.fadeIn();
+                   } else {
+                        pagetop.fadeOut();
+                        }
+                   });
+                   pagetop.click(function () {
+                       $('body, html').animate({ scrollTop: 0 }, 500);
+                          return false;
+               });
+            });
+        </script>
+    </footer>
+    
+</body>
+</html>

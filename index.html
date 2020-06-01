@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>みなな動物病院（押上にある犬と猫の動物病院）</title>
+    <meta name="description" content="東京都墨田区押上にある犬と猫の動物病院です。遅い時間（21時）までやっているので仕事後でも安心。トリミングと
+    お預り（ペットホテル）のサービスもしています。病院からスカイツリーも眺められますよ！">
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- jQuery 
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>$(function(){
+        var setImg = '#photo';
+        var fadeSpeed = 1600;
+        var switchDelay = 4000;
+    
+        $(setImg).children('img').css({opacity:'0'});
+        $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+    
+        setInterval(function(){
+            $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+        },switchDelay);
+    });</script>
+    <script>$(function(){
+        var setImg = '#sp-photo';
+        var fadeSpeed = 1600;
+        var switchDelay = 4000;
+    
+        $(setImg).children('img').css({opacity:'0'});
+        $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+    
+        setInterval(function(){
+            $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+        },switchDelay);
+    });</script>
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+</head>
+
+<body class="top01">
+
+    <header>
+        <div class="logo-col">
+            <h1><a href="index.html"><img src="images/top/logo.png" alt="みなな動物病院"></a></h1>
+        </div>
+        <div class="info-col">
+            <p><img id="denwa" src="images/top/denwa2.png" alt="denwa"></p>
+            <dl class="reception">
+                <dt>受付</dt>
+                <dd>午前9:00～午後9:00</dd>
+            </dl>
+            <dl class="holiday">
+                <dt>休診日</dt>
+                <dd>木曜・日曜・祝日</dd>
+            </dl>
+        </div>
+        <div class="menubtn"><img src="images/top/btn-menu2.png" style="width: 40px; height: 38px;" alt=""></div>
+        <ul class="sp-menubtn_toggle">
+          <li><a href="index.html"><img src="images/top/t-home.png" alt=""></a></li>
+          <li><a href="about.html"><img src="images/top/t-touin.png" alt=""></a></li>
+          <li><a href="guide.html"><img src="images/top/t-shinryou.png" alt=""></a></li>
+          <li><a href="facilities.html"><img src="images/top/t-shisetsu.png" alt=""></a></li>
+          <li><a href="service.html"><img src="images/top/t-service.png" alt=""></a></li>
+        </ul>
+        <script>
+            $(document).ready(function(){
+              $(".menubtn").click(function(){
+                $(".sp-menubtn_toggle").slideToggle();
+              });
+            });
+        </script>
+    </header>
+    
+    <nav class="gnav">
+        <div class="menu-navi">
+            <ul class="menu-navi-li">
+              <li><a href="index.html"><img src="images/top/t-home.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="about.html"><img src="images/top/t-touin.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="guide.html"><img src="images/top/t-shinryou.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="facilities.html"><img src="images/top/t-shisetsu.png" alt=""></a></li>
+              <li><img class="kugiri" src="images/top/t_kugiri.png" width="11" height="18" alt=""></li>
+              <li><a href="service.html"><img src="images/top/t-service.png" alt=""></a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="tpr">
+        
+        <div id="photo">
+            <img src="images/top/topdogdeco.png" alt="">
+            <img src="images/top/topcatdeco.png" alt="">
+        </div>
+        <div id="sp-photo">
+            <img src="images/top/sp_topdogdeco.png" alt="">
+            <img src="images/top/sp_topcatdeco.png" alt="">
+        </div>
+        
+        <div class="news-wrap">
+            <h3>お知らせ</h3>
+            <div class="news-content">
+                <div class="news-left">
+                    <dl>
+                        <dt>2020.05.25</dt>
+                        <dd><a href="#">フィラリア予防のお知らせ</a></dd>
+                        <dt>2020.04.26</dt>
+                        <dd><a href="#">ステイホーム期間中の当院について</a></dd>
+                        <dt>2020.04.10</dt>
+                        <dd><a href="#">新型コロナウィルスに対する対応について</a></dd>
+                        <dt>2020.03.02</dt>
+                        <dd><a href="#">狂犬病予防注射のお知らせ</a></dd>
+                    </dl>
+                    <p class="lis"><a href="#">一覧</a></p>
+                </div>
+                <div class="news-right">
+                    <img src="images/top/tophospital.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="annai-wrap">
+            <h3>病院案内</h3>
+            <div class="annai-content">
+                <div class="annai-left">
+                    <dl>
+    					<dt>みなな動物病院</dt>
+    					<dd>〒111-1111</dd>
+    					<dd>東京都墨田区押上1-2-3</dd>
+    					<dd class="tel"><img src="images/top/denwa2.png" alt="電話番号"></dd>
+    				</dl>
+    				<div class="sche-img">
+    				    <img src="images/top/sche.png" alt="">
+    				</div>
+                    <div class="exp1">
+                        <p>休診日　木曜・日曜・祝日</p><br><br class="pcbr">
+                        <p>予約の方優先となります。</p>
+                        <p>お急ぎの場合は、事前にお電話ください。</p>
+                    </div>
+                    <div class="exp2">
+                        <p><span>夜間救急</span></p>
+                        <p>夜間にお急ぎで診察が必要なかたは、当院の代わりに診察が<br class="pcbr">可能な下記の病院をご紹介いたします。</p>
+                        <p>墨田区夜間動物救急センター<br class="spbr"> tel.03-1111-1111</p>
+                    </div>
+                    <div class="exp3">
+                        <p><span>お支払い</span></p>
+                        <p>現金の他、クレジットカード/PayPayもご利用いただけます。</p>
+                        <img src="images/top/credit.jpg" alt="">
+                    </div>
+                    <!--<p class="lis"><a href="#">はじめての方へ</a></p>   -->
+                </div>
+                <div class="annai-right">
+                    <p><span class="spbr">アクセス</span></p>
+                    <div class="ggmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6456618084258!2d139.81110841460608!3d35.71033633598387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed63c424369%3A0xa16dd866dfaa5fb9!2z5oq85LiK6aeFKOOCueOCq-OCpOODhOODquODvOWJjSk!5e0!3m2!1sja!2sjp!4v1590364963515!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                    <div class="exp1 acc">
+                        <div class="acc-left"><i class="fa fa-subway fa-fw" aria-hidden="true"></i> <span>電車でおこしの方</span></div>
+                        <div class="acc-right">
+                        <p>東京メトロ半蔵門線　押上駅徒歩3分<br>
+                        都営浅草線　　　　　押上駅徒歩3分</p>
+                        </div>
+        			</div>
+                    <div class="exp1 acc">
+                        <div class="acc-left"><i class="fa fa-car fa-fw" aria-hidden="true"></i> <span>お車でおこしの方</span></div>
+                        <div class="acc-right">
+                        <p>P1～3のコインパーキングをご利用ください。30分の料金を当院でお支払いいたしますので、受付にお申し付けください。</p>
+                        </div>
+        			</div>
+        			<div class="exp3">
+                        <img src="images/top/line.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+    
+    <footer>
+        <div id="pagetop">
+            <a href="#" title="ページトップへ" class="enable light"><img src="images/top/btn-pageup2.png" alt=""></a>
+        </div>
+        <div class="footer-navi">
+            <div class="info-col left-col">
+				<dl>
+					<dt><a href="/" class="home">みなな動物病院</a></dt>
+					<dd>〒111-1111　東京都墨田区押上1-2-3</dd>
+					<dd>TEL.0120-11-1111</dd>
+				</dl>
+			</div>
+			<div class="nav-col right-col">
+				<div id="footer-nav">
+					<ul>
+						<li class="sla"><a href="index.html">ホーム</a></li>
+						<li class="sla"><a href="about.html">当院について</a></li>
+						<li class="sla"><a href="guide.html">診療案内</a></li>
+						<li class="sla"><a href="facilities.html">施設紹介</a></li>
+						<li><a href="service.html">サービス</a></li>
+					</ul>
+				</div>
+				<p id="copyright">Copyright© MINANA animal hospital. All Rights Reserved.</p>
+			</div>
+        </div>
+        <script>
+            $(document).ready(function() {
+              var pagetop = $('#pagetop');
+                $(window).scroll(function () {
+                   if ($(this).scrollTop() > 100) {
+                        pagetop.fadeIn();
+                   } else {
+                        pagetop.fadeOut();
+                        }
+                   });
+                   pagetop.click(function () {
+                       $('body, html').animate({ scrollTop: 0 }, 500);
+                          return false;
+               });
+            });
+        </script>
+    </footer>
+    
+</body>
+</html>
