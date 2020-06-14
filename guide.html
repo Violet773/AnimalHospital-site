@@ -83,6 +83,23 @@
             <p><a href="#hajimete">はじめての方へ</a></p>
             <p><a href="#shinryou">診療内容</a></p>
         </div>
+        <script>
+        $(document).ready(function(){        
+                $('a[href^="#"]').on("click", function () {
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? "html" : href);
+            var position = target.offset().top;
+            $("html, body").animate(
+              {
+                scrollTop: position,
+              },
+              300,
+              "swing"
+            );
+            return false;
+          });
+            });
+        </script>
         <div id="hospital-info">
 			<section class="sec">
 				<h3>病院案内</h3>
